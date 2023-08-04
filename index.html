@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    
+        
+    </body>
+    <!-- <script src="alert.js"></script> -->
+    <script>
+
+
+
+    let nums = [2,7,11,15, 6, 3, 8 , 1],
+        target = 9,
+        array = {},
+        result = [];
+
+    nums.map(function(val, i) {
+        if (array[target - val] !== undefined) 
+            result.push([array[target - val], i]);
+            
+        array[val] = i;
+    });
+
+    console.log(result);
+
+
+
+
+
+
+// };
+        // let _string = 'abczyz';
+        // let array = [0,1,2,'zz']
+
+        // document.write(_string.length, array.length)
+        // document.writeln('' +1 + 0 + "<br>")
+        // document.writeln('' +1 + 0)
+        // document.writeln('' +1 + 0)
+        // document.writeln('' +1 + 0)
+        // let age = prompt("how old are you?", 100);
+        // let _confirm = confirm('Are you ' + age + ' years old'); //boolean
+
+        // if (_confirm) {
+        //     alert(`${age} is your age`);
+        // } else {
+        //     alert('Not your age');
+        // }
+
+
+        // alert(typeof Number(age))
+
+        /*
+         alert("hello world");
+         alert("hello world");
+         alert("hello world");
+        */
+    </script>
+</html>

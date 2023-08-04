@@ -1,0 +1,35 @@
+<!-- Viết chương trình có một ô input, một button. Khi click vào button thì in ra các số nguyên tố từ 1 tới giá trị của ô input -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <h4> Nhập 1 số</h4>
+        <form id="formStudent" action="https://url-java-provide.com">
+            <input type="number" name="number_input" value="" id="van" min="0"><br><br>
+            <input type="submit">
+        </form>
+        <div>
+            Hien thi ket qua: <b id="show_infomation">
+
+            </b>
+            <br>
+        </div>  
+
+        <script>
+
+            document.getElementById('formStudent').addEventListener('submit', function(element) {
+                element.preventDefault();
+                let form = new FormData(element.target);
+               
+                let _numberInput = form.get('number_input');
+
+                let listNumber = '';
+
+                for (let i = 1; i <= _numberInput; i++) {
+                    listNumber += `${i}, `;
+                }
+
+                document.getElementById('show_infomation').innerHTML = listNumber;
+            });
+        </script>
+    </body>
+</html>
